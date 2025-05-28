@@ -30,8 +30,8 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white  z-60">
-      <div className="flex items-center">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white z-60">
+      <div className="flex items-center ">
         <img src={Swastik} alt="logo" className="w-12 h-12 rounded-full ml-2" />
         <h1 className="text-5xl ml-2 bg-gradient-to-r from-[#3f51b5] via-[#9c27b0] to-[#e91e63] bg-clip-text text-transparent">
           Welcome
@@ -54,7 +54,7 @@ const NavBar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-300 md:hidden"
+        className="cursor-pointer pr-4 z-50 text-gray-300 md:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>

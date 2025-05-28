@@ -28,7 +28,7 @@ const Home = () => {
           <div className="text-2xl sm:text-6xl font-bold">
             <span style={{ fontWeight: "bold", color: "pink" }}>
               <Typewriter
-                words={["Full Stack Developer", "Poblem Solver"]}
+                words={["Full Stack Developer", "Problem Solver"]}
                 loop={100}
                 typeSpeed={145}
                 deleteSpeed={90}
