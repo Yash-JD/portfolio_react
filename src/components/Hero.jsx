@@ -36,7 +36,7 @@ const Home = () => {
               />
             </span>
             <span style={{ color: "red" }}>
-              <Cursor />
+              <Cursor className="z-0" />
             </span>
           </div>
           <p className="text-gray-200 py-4 max-w-md">
