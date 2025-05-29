@@ -20,7 +20,7 @@ const Projects = () => {
       id: 1,
       name: "E-Shop",
       src: ecommerce,
-      demo: "",
+      demo: "https://github.com/Yash-JD/react-ecommerce-app",
       code: "https://github.com/Yash-JD/react-ecommerce-app",
       description:
         "A modern e-commerce platform with product listings, wishlist, cart, and checkout features. Also includes user authentication and authorization. Integrated with Razorpay for payment processing.",
@@ -32,7 +32,7 @@ const Projects = () => {
       id: 2,
       name: "Study Notion",
       src: studyNotion,
-      demo: "",
+      demo: "https://college-ed-tech.vercel.app/",
       code: "https://github.com/Yash-JD/collegeEdTech",
       description:
         "A comprehensive educational platform designed to enhance the learning experience for students. It features a wide range of courses and resources to support academic success.",
