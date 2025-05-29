@@ -11,12 +11,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      name="home"
-      className="h-screen w-full mt-[6.5rem] mb-[10rem] md:mt-0 "
-    >
+    <div name="home" className="w-full min-h-screen py-10">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-3 md:flex-row gap-10">
-        <div className="md:w-[40%]  ">
+        <div className="md:w-[40%]">
           <img
             src={profile}
             alt="my profile"

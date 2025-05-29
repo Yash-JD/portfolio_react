@@ -10,7 +10,6 @@ import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
 import nodejs from "../assets/node.png";
 import sql from "../assets/sql.png";
-import { data } from "autoprefixer";
 
 const Skills = () => {
   useEffect(() => {
