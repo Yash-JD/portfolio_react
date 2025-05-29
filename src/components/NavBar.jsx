@@ -13,18 +13,22 @@ const NavBar = () => {
     },
     {
       id: 2,
-      link: "projects",
-    },
-    {
-      id: 3,
-      link: "about",
-    },
-    {
-      id: 4,
       link: "experience",
     },
     {
+      id: 3,
+      link: "projects",
+    },
+    {
+      id: 4,
+      link: "about",
+    },
+    {
       id: 5,
+      link: "skills",
+    },
+    {
+      id: 6,
       link: "contact",
     },
   ];
@@ -36,7 +40,6 @@ const NavBar = () => {
         <h1 className="text-5xl ml-2 bg-gradient-to-r from-[#3f51b5] via-[#9c27b0] to-[#e91e63] bg-clip-text text-transparent">
           Welcome
         </h1>
-        <img src={Swastik} alt="logo" className="w-12 h-12 rounded-full ml-2" />
       </div>
 
       <ul className="hidden md:flex">

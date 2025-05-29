@@ -7,7 +7,7 @@ const Contact = () => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
-    <div name="contact" className="w-full h-screen p-4  text-white mt-[6.5rem]">
+    <div name="contact" className="w-full text-white min-h-screen py-10 px-4">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p

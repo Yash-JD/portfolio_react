@@ -88,9 +88,9 @@ const Projects = () => {
   ];
 
   return (
-    <div name="projects" className="w-full text-white my-[3.5rem]">
+    <div name="projects" className="w-full text-white min-h-screen py-10">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8 mb-8">
+        <div className="pb-6 mb-8">
           <p
             className="text-4xl font-bold inline border-b-4 border-gray-500"
             data-aos="fade-up"
@@ -100,7 +100,7 @@ const Projects = () => {
         </div>
 
         <div
-          className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 px-12 sm:px-0"
+          className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 space-y-8"
           data-aos-anchor-placement="top-center"
         >
           {portfolios.map((project) => (
