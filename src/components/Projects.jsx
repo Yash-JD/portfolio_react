@@ -81,8 +81,33 @@ const Projects = () => {
           {portfolios.map((project) => (
             <div
               key={project.id}
-              className="p-6 bg-white/5 backdrop-blur-lg shadow-md shadow-gray-600 rounded-lg transition-all duration-400 hover:bg-white/15 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20"
+              className="flex flex-col gap-5 p-6 transition-all duration-400"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+                padding: '24px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '20px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
+              }}
               data-aos="fade-up"
+              data-aos-delay={project.id * 100}
             >
               <h3 className="uppercase font-bold text-lg mb-4 text-center">
                 {project.name}

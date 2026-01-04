@@ -1,159 +1,186 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 let logo1 = require("../assets/portfolio/square_infosoft.jpg");
 let logo2 = require("../assets/portfolio/logwintech.jpg");
 
 const Experience = () => {
-  const [expandedExperiences, setExpandedExperiences] = useState({});
+    const [expandedExperiences, setExpandedExperiences] = useState({});
 
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
+    useEffect(() => {
+        AOS.init({ duration: 2000, once: true });
+    }, []);
 
-  const toggleExpanded = (id) => {
-    setExpandedExperiences(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
+    const toggleExpanded = (id) => {
+        setExpandedExperiences((prev) => ({
+            ...prev,
+            [id]: !prev[id]
+        }));
+    };
 
-  const experiences = [
-    {
-      id: 1,
-      role: "Backend Developer",
-      company: "Square Infosoft",
-      date: "Jun 2025 – Present",
-      location: "Surat, Gujarat",
-      description: "• Worked extensively on designing and building scalable backend systems using NestJS, Node.js, Prisma ORM, and MySQL. Implemented robust REST APIs with UUID-based data models, optimized schemas, and clean service-layer abstractions.\n• Built complex business logic including streak tracking systems, settlement and debt calculations, subscription lifecycle management, and reminder/notification workflows.\n• Integrated multiple third-party services such as Firebase Cloud Messaging (real-time and conditional notifications), Redis (Bull queues for background processing), Cloudflare Stream (video lifecycle via webhooks), RevenueCat (in-app subscriptions), Juspay UPI Intent & AutoPay flows, and SMS gateways. Designed secure webhook handlers, signature verification, and idempotent transaction processing.\n• Developed data scraping and ETL pipelines, applying whitelist-based filtering, topic/article grouping, and transferring structured data from MongoDB to MySQL via Azure Functions. Focused on data accuracy, performance, and storage optimization.\n• Hands-on experience with cron jobs, time-window–based logic, offline/online user handling, and real-time system behavior, with strong emphasis on production readiness, fault tolerance, and clean architecture.",
-      skills: "TypeScript · NestJS · Node.js · Prisma ORM · REST APIs · Redis · Bullmq · MySQL · MongoDB · Azure Functions · Git · DigitalOcean · Cloudflare Stream · Ubuntu · Firebase",
-      img: logo1
-    },
-    {
-      id: 2,
-      role: "Software Engineer Intern",
-      company: "LogWinTech Pvt. Lmt",
-      date: "Feb 2025 – May 2025",
-      location: "Surat, Gujarat",
-      description: "• Database Architecture: I designed and optimized the MySQL database schemas specifically for e-commerce data, ensuring the system remained scalable and the data stayed organized.\n• Backend API Development: I built the application's RESTful APIs using Node.js, where I developed custom middleware to handle essential tasks like user authentication and request validation.\n• Frontend State Management: Using React and Redux, I built the interactive parts of the site, focusing on managing the state for the shopping cart and favorites functionality to keep the user experience seamless.\n• Payment Integration: I worked on the end-to-end integration of the Razorpay payment gateway, focusing on creating a secure and reliable checkout process for customers.\n• Feature Ownership: I took charge of the \"Cart\" and \"Wishlist\" modules, handling everything from the initial logic to the final UI updates to make the features feel responsive and easy to use.",
-      skills: "JavaScript · Node.js · Express.js · MySQL · React.js · Tailwind CSS",
-      img: logo2
-    }
-  ];
+    const experiences = [
+        {
+            id: 1,
+            role: "Backend Developer",
+            company: "Square Infosoft",
+            date: "Jun 2025 – Present",
+            location: "Surat, Gujarat",
+            description: "• Worked extensively on designing and building scalable backend systems using NestJS, Node.js, Prisma ORM, and MySQL.\n• Built complex business logic including streak tracking systems, settlement and debt calculations.\n• Integrated Firebase Cloud Messaging, Redis queues, Cloudflare Stream, RevenueCat, Juspay.\n• Developed data scraping and ETL pipelines using Azure Functions.\n• Focused on production readiness, fault tolerance, and clean architecture.",
+            skills: "TypeScript · NestJS · Node.js · Prisma ORM · REST APIs · Redis · Bullmq · MySQL · MongoDB · Azure Functions · Git · DigitalOcean · Cloudflare Stream · Firebase",
+            img: logo1
+        }, {
+            id: 2,
+            role: "Software Engineer Intern",
+            company: "LogWinTech Pvt. Ltd",
+            date: "Feb 2025 – May 2025",
+            location: "Surat, Gujarat",
+            description: "• Designed scalable MySQL database schemas for e-commerce.\n• Built REST APIs using Node.js and Express.\n• Developed cart & wishlist features using React and Redux.\n• Integrated Razorpay payment gateway.\n• Owned Cart and Wishlist modules end-to-end.",
+            skills: "JavaScript · Node.js · Express.js · MySQL · React.js · Redux · Tailwind CSS",
+            img: logo2
+        },
+    ];
 
-  return (
-    <div
-      name="experience"
-      className="w-full text-white py-16 md:py-20 px-4"
-    >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
-        <div className="pb-2 mb-6 text-center flex items-center justify-center gap-3" data-aos="fade-up">
-          <span className="text-3xl">💼</span>
-          <p className="text-4xl font-bold inline">
-            Experience
-          </p>
-        </div>
+    return (
+        <div name="experience" className="w-full text-white py-16 px-4">
+            <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full">
 
-        <div className="mt-8 space-y-6" data-aos="fade-up">
-          {experiences.map((experience, index) => (
-            <div
-              key={experience.id}
-              className="flex gap-5 p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl transition-all duration-400 hover:bg-white/8 hover:border-white/20 hover:scale-102 hover:translate-y-[-4px] hover:shadow-xl shadow-lg"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              {/* Company Logo */}
-              <div className="w-14 h-14 rounded-2xl bg-white/8 backdrop-blur border border-white/15 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-md">
-                {experience.img ? (
-                  <img 
-                    src={experience.img} 
-                    alt={`${experience.company} logo`}
-                    className="w-full h-full object-contain"
-                  />
-                ) : (
-                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">
-                      {experience.company.charAt(0)}
-                    </span>
-                  </div>
-                )}
-              </div>
-
-              {/* Experience Content */}
-              <div className="flex-1 flex flex-col gap-2">
-                <h3 className="text-xl md:text-2xl font-bold text-cyan-400">
-                  {experience.role}
-                </h3>
-                <div className="text-lg md:text-xl font-medium text-white/90">
-                  {experience.company}
-                </div>
-                
-                {/* Date and Location */}
-                <div className="flex gap-4 md:gap-6 my-2">
-                  <span className="text-sm text-gray-300 flex items-center gap-1">
-                    <span className="text-xs">📅</span>
-                    {experience.date}
-                  </span>
-                  <span className="text-sm text-gray-300 flex items-center gap-1">
-                    <span className="text-xs">📍</span>
-                    {experience.location}
-                  </span>
+                {/* Section Header */}
+                <div className="pb-2 mb-8 text-center flex items-center justify-center gap-3" data-aos="fade-up">
+                    <span className="text-3xl">💼</span>
+                    <h2 className="text-4xl font-bold">Experience</h2>
                 </div>
 
-                <div className="text-base text-gray-200 leading-relaxed">
-                  {(() => {
-                    const lines = experience.description.split('\n');
-                    const isExpanded = expandedExperiences[experience.id];
-                    const displayLines = isExpanded ? lines : lines.slice(0, 1);
-                    
-                    return (
-                      <>
-                        {displayLines.map((point, index) => (
-                          <div key={index} className="flex items-start gap-2 mb-2">
-                            <span className="text-cyan-400 mt-1">•</span>
-                            <span>{point.replace('• ', '')}</span>
-                          </div>
-                        ))}
-                        
-                        {lines.length > 1 && (
-                          <button
-                            onClick={() => toggleExpanded(experience.id)}
-                            className="text-cyan-400 hover:text-cyan-300 font-medium text-sm mt-2 transition-colors duration-200"
-                          >
-                            {isExpanded ? 'Show less' : '...more'}
-                          </button>
-                        )}
-                      </>
-                    );
-                  })()}
-                </div>
+                {/* Experience Cards */}
+                <div className="space-y-6">
+                    {
+                        experiences.map((experience, index) => {
+                            const lines = experience.description.split("\n");
+                            const isExpanded = expandedExperiences[experience.id];
+                            const displayLines = isExpanded ? lines : lines.slice(0, 1);
 
-                {/* Skills Section */}
-                {experience.skills && (
-                  <div className="mt-4 pt-4 border-t border-white/10">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-sm">💡</span>
-                      <span className="text-sm font-semibold text-white/80">Skills:</span>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {experience.skills.split(' · ').map((skill, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded-full border border-cyan-400/30"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                            return (
+                                <div
+                                    key={experience.id}
+                                    className="flex gap-5 p-6 transition-all duration-400"
+                                    style={{
+                                        display: 'flex',
+                                        gap: '20px',
+                                        padding: '24px',
+                                        background: 'rgba(255, 255, 255, 0.05)',
+                                        backdropFilter: 'blur(20px)',
+                                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                                        borderRadius: '20px',
+                                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                                        transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                                        e.currentTarget.style.transform = 'translateY(-4px)';
+                                        e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.3)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                                        e.currentTarget.style.transform = 'translateY(0px)';
+                                        e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
+                                    }}
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 100}
+                                >
+                                    <div className="w-14 h-14 rounded-2xl bg-white/8 border border-white/15 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-md">
+                                        {
+                                            experience.img ? (
+                                                <img src={
+                                                    experience.img
+                                                }
+                                                    alt={
+                                                        `${experience.company
+                                                        } logo`
+                                                    }
+                                                    className="w-full h-full object-contain" />
+                                            ) : (
+                                                <span className="font-bold text-cyan-400">
+                                                    {
+                                                        experience.company.charAt(0)
+                                                    } </span>
+                                            )
+                                        } </div>
+
+                                    {/* Content */}
+                                    <div className="flex-1 flex flex-col gap-2">
+                                        <h3 className="text-xl md:text-2xl font-bold text-cyan-400">
+                                            {
+                                                experience.role
+                                            } </h3>
+
+                                        <div className="text-lg font-medium text-white/90">
+                                            {
+                                                experience.company
+                                            } </div>
+
+                                        {/* Date & Location */}
+                                        <div className="flex gap-6 my-2 text-sm text-gray-300">
+                                            <span className="flex items-center gap-1">
+                                                <span className="text-xs">📅</span>
+                                                {
+                                                    experience.date
+                                                } </span>
+                                            <span className="flex items-center gap-1">
+                                                <span className="text-xs">📍</span>
+                                                {
+                                                    experience.location
+                                                } </span>
+                                        </div>
+
+                                        {/* Description */}
+                                        <div className="text-gray-200 leading-relaxed">
+                                            {
+                                                displayLines.map((point, i) => (
+                                                    <div key={i}
+                                                        className="flex gap-2 mb-2">
+                                                        <span className="text-cyan-400">•</span>
+                                                        <span>{
+                                                            point.replace("• ", "")
+                                                        }</span>
+                                                    </div>
+                                                ))
+                                            }
+
+                                            {
+                                                lines.length > 1 && (
+                                                    <button onClick={
+                                                        () => toggleExpanded(experience.id)
+                                                    }
+                                                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium mt-2">
+                                                        {
+                                                            isExpanded ? "Show less" : "...more"
+                                                        } </button>
+                                                )
+                                            } </div>
+
+                                        {/* Skills */}
+                                        <div className="mt-4 pt-4 border-t border-white/10">
+                                            <div className="flex flex-wrap gap-2">
+                                                {
+                                                    experience.skills.split(" · ").map((skill, i) => (
+                                                        <span key={i}
+                                                            className="px-2 py-1 text-xs rounded-full
+                                                                                                                                                                                                                                                                                                                                                                                     bg-cyan-400/20 text-cyan-300
+                                                                                                                                                                                                                                                                                                                                                                                     border border-cyan-400/30">
+                                                            {skill} </span>
+                                                    ))
+                                                } </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })
+                    } </div>
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Experience;

@@ -26,7 +26,7 @@ const Education = () => {
       date: "2021 – 2025",
       gpa: "8.5/10",
       grade: 'First class with distinction',
-    //   description: "• Pursued B.E. degree in Computer Science with a minor in AI & Machine Learning.\n• Gained comprehensive knowledge in data structures, algorithms, software engineering, and computer networks.\n• Worked on various projects including full-stack applications, machine learning models, and system design.\n• Active participant in coding competitions and technical workshops.\n• Developed strong problem-solving skills and collaborative teamwork abilities.",
+      //   description: "• Pursued B.E. degree in Computer Science with a minor in AI & Machine Learning.\n• Gained comprehensive knowledge in data structures, algorithms, software engineering, and computer networks.\n• Worked on various projects including full-stack applications, machine learning models, and system design.\n• Active participant in coding competitions and technical workshops.\n• Developed strong problem-solving skills and collaborative teamwork abilities.",
       img: image
     }
   ];
@@ -48,15 +48,38 @@ const Education = () => {
           {education.map((edu, index) => (
             <div
               key={edu.id}
-              className="flex gap-5 p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl transition-all duration-400 hover:bg-white/8 hover:border-white/20 hover:translate-y-[-4px] hover:shadow-xl shadow-lg"
+              className="flex gap-5 p-6 transition-all duration-400"
+              style={{
+                display: 'flex',
+                gap: '20px',
+                padding: '24px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '20px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
+              }}
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               {/* School Logo */}
               <div className="w-14 h-14 rounded-2xl bg-white/8 backdrop-blur border border-white/15 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-md">
                 {edu.img ? (
-                  <img 
-                    src={edu.img} 
+                  <img
+                    src={edu.img}
                     alt={`${edu.school} logo`}
                     className="w-full h-full object-contain"
                   />
@@ -77,7 +100,7 @@ const Education = () => {
                 <div className="text-lg md:text-xl font-medium text-white/90">
                   {edu.school}
                 </div>
-                
+
                 {/* Date and Location */}
                 <div className="flex gap-4 md:gap-6 my-2">
                   <span className="text-sm text-gray-300 flex items-center gap-1">
