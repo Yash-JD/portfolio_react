@@ -17,24 +17,23 @@ const About = () => {
           </p>
         </div>
 
-        <p className="text-xl mt-6 mb-4" data-aos="fade-up">
-          Hi, my name is Yash Dobariya and I am a software developer. I have
-          pursued B.E. degree in CS along with a minors degree in AI&ML. I have
-          a passion for solving complex problems and creating innovative
-          solutions that enhance user experiences. Throughout my journey, I have
-          gained adequate amount of experience in JavaScript for client side as
-          well as server side, and have worked on a variety of projects such as
-          Trekking App, E-commerce App.
-        </p>
+        <div className="space-y-6" data-aos="fade-up">
+          <p className="text-xl md:text-lg leading-relaxed">
+            Hi, I'm <span className="text-cyan-400 font-semibold">Yash Dobariya</span>, a Computer Science graduate student at LDRP Institute of Technology & Research, Gandhinagar, with a minors degree in AI&ML. I'm passionate about solving complex problems and creating innovative solutions that enhance user experiences.
+          </p>
 
-        <br />
+          <p className="text-xl md:text-lg leading-relaxed">
+            I'm <span className="text-pink-400 font-semibold">highly enthusiastic about exploring new ideas</span>, solving real-world problems, and transforming concepts into reliable, production-ready solutions. With hands-on experience in full-stack engineering, system integrations, and data-driven applications, I actively seek opportunities that challenge me to grow technically and contribute meaningful value.
+          </p>
 
-        <p className="text-xl" data-aos="fade-up">
-          I am a self-motivated individual who is always eager to learn and stay
-          up-to-date with the latest trends in software development. Outside of
-          bettering my skills and making projects, I enjoy playing basketBall
-          and going to the gym, which helps me stay creative and focused.
-        </p>
+          <p className="text-xl md:text-lg leading-relaxed">
+            <span className="text-purple-400 font-semibold">Passionate about learning new skills and technologies</span>, with a strong focus on continuously upgrading my knowledge in software development. I'm driven to build a deep, practical understanding of modern backend systems and scalable architectures, having worked extensively with JavaScript for both client-side and server-side development.
+          </p>
+
+          <p className="text-xl md:text-lg leading-relaxed">
+            I believe in <span className="text-green-400 font-semibold">continuous improvement, clean architecture, and learning through building</span>—constantly pushing myself to become a more effective and well-rounded software engineer. When I'm not coding, I enjoy playing basketball and going to the gym, which helps me stay creative and focused.
+          </p>
+        </div>
       </div>
     </div>
   );
