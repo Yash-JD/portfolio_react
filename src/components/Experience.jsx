@@ -163,12 +163,19 @@ const Experience = () => {
                                         {/* Skills */}
                                         <div className="mt-4 pt-4 border-t border-white/10">
                                             <div className="flex flex-wrap gap-2">
+                                                <span className="text-sm">💡</span>
                                                 {
                                                     experience.skills.split(" · ").map((skill, i) => (
                                                         <span key={i}
                                                             className="px-2 py-1 text-xs rounded-full
-                                                                                                                                                                                                                                                                                                                                                                                     bg-cyan-400/20 text-cyan-300
-                                                                                                                                                                                                                                                                                                                                                                                     border border-cyan-400/30">
+                                                            bg-cyan-400/20 text-cyan-300
+                                                            border border-cyan-400/30
+                                                            transition-all duration-200
+                                                            hover:bg-cyan-400/30
+                                                            hover:text-cyan-200
+                                                            hover:border-cyan-400/50
+                                                            hover:scale-105
+                                                            cursor-pointer">
                                                             {skill} </span>
                                                     ))
                                                 } </div>
