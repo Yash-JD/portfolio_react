@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono&family=Space+Mono&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto Mono", monospace;
+    background: #c31432;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #845d64);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}
+
+.typewriter {
+  font-weight: bold;
+  background: linear-gradient(to right, #3f51b5, #9c27b0, #e91e63);
+  background-clip: text;
+}
+
+.name {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #a162e8 0%,
+    #ee4949 46%,
+    #dc75fb 100%
+  );
+
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-size: 1.4rem !important;
+  background-color: #8e9ffa;
+  background-image: linear-gradient(
+    45deg,
+    #8e9ffa 10%,
+    #f874ef 30%,
+    #ffcc70 45%,
+    #ffffff 100%
+  );
+
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
