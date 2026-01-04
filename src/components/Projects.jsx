@@ -81,7 +81,7 @@ const Projects = () => {
           {portfolios.map((project) => (
             <div
               key={project.id}
-              className="shadow-md shadow-gray-600 rounded-lg"
+              className="p-6 bg-white/5 backdrop-blur-lg shadow-md shadow-gray-600 rounded-lg transition-all duration-400 hover:bg-white/8 hover:translate-y-[-4px] hover:shadow-xl"
               data-aos="fade-up"
             >
               <h3 className="uppercase font-bold text-lg mb-4 text-center">
