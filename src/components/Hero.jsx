@@ -56,8 +56,8 @@ const Home = () => {
               className="group text-white w-fit px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 cursor-pointer"
             >
               Resume
-              <span className="group-hover:rotate-180 duration-500">
-                <MdOutlineArrowCircleUp size={25} className="ml-1" />
+              <span className="group-hover:rotate-180 duration-500 ml-2">
+                <MdOutlineArrowCircleUp size={25} />
               </span>
             </a>
           </div>
