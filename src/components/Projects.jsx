@@ -81,7 +81,7 @@ const Projects = () => {
           {portfolios.map((project) => (
             <div
               key={project.id}
-              className="p-6 bg-white/5 backdrop-blur-lg shadow-md shadow-gray-600 rounded-lg transition-all duration-400 hover:bg-white/8 hover:translate-y-[-4px] hover:shadow-xl"
+              className="p-6 bg-white/5 backdrop-blur-lg shadow-md shadow-gray-600 rounded-lg transition-all duration-400 hover:bg-white/15 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20"
               data-aos="fade-up"
             >
               <h3 className="uppercase font-bold text-lg mb-4 text-center">
@@ -90,7 +90,7 @@ const Projects = () => {
               <img
                 src={project.src}
                 alt=""
-                className="rounded-md duration-200 h-[8rem] w-[18rem] hover:scale-105 object-contain mx-auto mb-3"
+                className="rounded-md duration-200 h-[8rem] w-[18rem] object-contain mx-auto mb-3"
               />
               <div className="flex items-center justify-center">
                 <button

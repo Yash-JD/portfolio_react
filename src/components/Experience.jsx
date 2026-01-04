@@ -58,7 +58,7 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <div
               key={experience.id}
-              className="flex gap-5 p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl transition-all duration-400 hover:bg-white/8 hover:border-white/20 hover:translate-y-[-4px] hover:shadow-xl shadow-lg"
+              className="flex gap-5 p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl transition-all duration-400 hover:bg-white/8 hover:border-white/20 hover:scale-102 hover:translate-y-[-4px] hover:shadow-xl shadow-lg"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
