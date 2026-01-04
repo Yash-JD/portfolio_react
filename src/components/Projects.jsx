@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ecommerce from "../assets/portfolio/ecommerce.png";
-import gifGenerator from "../assets/portfolio/gifGenerator.png";
-import textTranform from "../assets/portfolio/textTransform.png";
-import worldAtlas from "../assets/portfolio/worldAtlas.png";
 import yelpCamp from "../assets/portfolio/YelpCamp.png";
 import studyNotion from "../assets/portfolio/studyNotion.png";
+import chatty from "../assets/portfolio/chatty.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -18,18 +16,29 @@ const Projects = () => {
   const portfolios = [
     {
       id: 1,
-      name: "E-Shop",
-      src: ecommerce,
-      demo: "https://github.com/Yash-JD/react-ecommerce-app",
-      code: "https://github.com/Yash-JD/react-ecommerce-app",
+      name: "Chatty",
+      src: chatty,
+      demo: "https://chatty-xhmi.onrender.com/",
+      code: "https://github.com/Yash-JD/chatty-app",
       description:
-        "A modern e-commerce platform with product listings, wishlist, cart, and checkout features. Also includes user authentication and authorization. Integrated with Razorpay for payment processing.",
-      tech: "React, Redux, Node.js, Express, MySQL, Razorpay, Tailwind CSS",
+        "A real-time chat application with messaging, user authentication, and group chat features. Built with modern web technologies for seamless communication.",
+      tech: "React, Redux, Node.js, Express, MySQL, Socket.io, Tailwind CSS",
       features:
-        "Product management, user authentication with JWT, payment integration",
+        "Real-time messaging, user authentication, group chat, responsive design",
     },
     {
       id: 2,
+      name: "YelpCamp",
+      src: yelpCamp,
+      demo: "https://drive.google.com/file/d/1k6LtNq2acWgLz785-dGborBxi5xSVLjE/preview",
+      code: "https://github.com/Yash-JD/Yelp-Camp",
+      description:
+        "YelpCamp is a web app for sharing and reviewing campgrounds. It allows users to create, edit, and delete campgrounds, as well as leave reviews. Admin can manage users and campgrounds.",
+      tech: "Node.js, Express, MongoDB, EJS, Bootstrap",
+      features: "User authentication, campground management, review system",
+    },
+    {
+      id: 3,
       name: "Study Notion",
       src: studyNotion,
       demo: "https://college-ed-tech.vercel.app/",
@@ -41,50 +50,18 @@ const Projects = () => {
         "Course management, user authentication, progress tracking, responsive design, student & teacher dashboards",
     },
     {
-      id: 3,
-      name: "YelpCamp",
-      src: yelpCamp,
-      demo: "https://drive.google.com/file/d/1k6LtNq2acWgLz785-dGborBxi5xSVLjE/preview",
-      code: "https://github.com/Yash-JD/Yelp-Camp",
+      id: 4,
+      name: "E-Shop",
+      src: ecommerce,
+      demo: "https://github.com/Yash-JD/react-ecommerce-app",
+      code: "https://github.com/Yash-JD/react-ecommerce-app",
       description:
-        "YelpCamp is a web app for sharing and reviewing campgrounds. It allows users to create, edit, and delete campgrounds, as well as leave reviews. Admin can manage users and campgrounds.",
-      tech: "Node.js, Express, MongoDB, EJS, Bootstrap",
-      features: "User authentication, campground management, review system",
+        "A modern e-commerce platform with product listings, wishlist, cart, and checkout features. Also includes user authentication and authorization. Integrated with Razorpay for payment processing.",
+      tech: "React, Redux, Node.js, Express, MySQL, Razorpay, Tailwind CSS",
+      features:
+        "Product management, user authentication with JWT, payment integration",
     },
 
-    {
-      id: 4,
-      name: "World Atlas",
-      src: worldAtlas,
-      demo: "https://world-atlas-jade.vercel.app/",
-      code: "https://github.com/Yash-JD/world-atlas",
-      description:
-        "WorldAtlas is an interactive SPA to explore countries and their details.",
-      tech: "React, REST APIs, CSS",
-      features: "Country search, details view",
-    },
-    {
-      id: 5,
-      name: "Text Transform Tool",
-      src: textTranform,
-      demo: "https://text-transformation.vercel.app/",
-      code: "https://github.com/Yash-JD/Text-Transformation",
-      description: "A text transformation tool with various utilities.",
-      tech: "React, Redux Toolkit, CSS",
-      features:
-        "Text manipulation, case conversion, word count, character count",
-    },
-    {
-      id: 6,
-      name: "GIF Generator",
-      src: gifGenerator,
-      demo: "https://gif-generator-pied.vercel.app/",
-      code: "https://github.com/Yash-JD/gif_generator",
-      description:
-        "A GIF generator that allows users to search custom gifs and also see random gifs.",
-      tech: "React, Giphy API, CSS",
-      features: "GIF search, random GIF display, responsive design",
-    },
   ];
 
   return (
