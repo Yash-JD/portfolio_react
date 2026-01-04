@@ -37,7 +37,31 @@ const Contact = () => {
                 email
               )}%0AMessage: ${encodeURIComponent(message)}`;
             }}
-            className="flex flex-col w-full md:w-2/3 lg:w-1/2 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-white/20"
+            className="flex flex-col w-full md:w-2/3 lg:w-1/2 p-6 transition-all duration-400"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+              padding: '24px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+              transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+              e.currentTarget.style.transform = 'translateY(0px)';
+              e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
+            }}
             data-aos="fade-up"
           >
             <input
