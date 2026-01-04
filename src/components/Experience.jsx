@@ -132,6 +132,7 @@ const Experience = () => {
                 {experience.skills && (
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="flex items-center gap-2 mb-2">
+                      <span className="text-sm">💡</span>
                       <span className="text-sm font-semibold text-white/80">Skills:</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
