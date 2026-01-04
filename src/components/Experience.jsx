@@ -12,7 +12,8 @@ const Experience = () => {
       className="w-full text-white py-16 md:py-20 px-4"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
-        <div className="pb-2 mb-6 text-center" data-aos="fade-up">
+        <div className="pb-2 mb-6 text-center flex items-center justify-center gap-3" data-aos="fade-up">
+          <span className="text-3xl">💼</span>
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Experience
           </p>
