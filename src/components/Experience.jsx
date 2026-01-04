@@ -1,13 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 let logo1 = require("../assets/portfolio/square_infosoft.jpg");
 let logo2 = require("../assets/portfolio/logwintech.jpg");
 
 const Experience = () => {
+  const [expandedExperiences, setExpandedExperiences] = useState({});
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
+  const toggleExpanded = (id) => {
+    setExpandedExperiences(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   const experiences = [
     {
@@ -89,13 +98,32 @@ const Experience = () => {
                   </span>
                 </div>
 
-                <div className="text-base text-gray-200 leading-relaxed space-y-2">
-                  {experience.description.split('\n').map((point, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <span className="text-cyan-400 mt-1">•</span>
-                      <span>{point.replace('• ', '')}</span>
-                    </div>
-                  ))}
+                <div className="text-base text-gray-200 leading-relaxed">
+                  {(() => {
+                    const lines = experience.description.split('\n');
+                    const isExpanded = expandedExperiences[experience.id];
+                    const displayLines = isExpanded ? lines : lines.slice(0, 1);
+                    
+                    return (
+                      <>
+                        {displayLines.map((point, index) => (
+                          <div key={index} className="flex items-start gap-2 mb-2">
+                            <span className="text-cyan-400 mt-1">•</span>
+                            <span>{point.replace('• ', '')}</span>
+                          </div>
+                        ))}
+                        
+                        {lines.length > 1 && (
+                          <button
+                            onClick={() => toggleExpanded(experience.id)}
+                            className="text-cyan-400 hover:text-cyan-300 font-medium text-sm mt-2 transition-colors duration-200"
+                          >
+                            {isExpanded ? 'Show less' : '...more'}
+                          </button>
+                        )}
+                      </>
+                    );
+                  })()}
                 </div>
               </div>
             </div>
