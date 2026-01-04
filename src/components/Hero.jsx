@@ -17,7 +17,7 @@ const Home = () => {
           <img
             src={profile}
             alt="my profile"
-            className="rounded-full border-2 border-white w-2/3 md:w-full"
+            className="rounded-full border-2 border-white w-2/3 md:w-full animate-float"
           />
         </div>
         <div className="flex flex-col justify-center w-full md:w-[65%] gap-2 md:gap-3">
