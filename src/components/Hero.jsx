@@ -3,7 +3,7 @@ import { MdOutlineArrowCircleUp } from "react-icons/md";
 import { Typewriter, Cursor } from "react-simple-typewriter";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import profile from "../assets/portfolio/profile.png";
+import profile from "../assets/portfolio/profile_2.jpg";
 
 const Home = () => {
   useEffect(() => {
