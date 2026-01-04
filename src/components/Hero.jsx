@@ -41,9 +41,10 @@ const Home = () => {
           </div>
           <p className="text-gray-200 py-2 md:py-3 max-w-lg text-sm md:text-base">
             Hey there, I'm Yash, a Computer Science grad student at LDRP
-            Institure of Technology & Research, Gandhinagar. My journey spans
-            full-stack engineering in agile settings. I thrive on challenges,
-            adapt fast, and I'm geared up to innovate and learn. Welcome to my
+            Institute of Technology & Research, Gandhinagar. I'm a passionate
+            Backend Developer specializing in building scalable systems with
+            NestJS, Node.js, and modern databases. I thrive on solving complex
+            challenges and creating production-ready solutions. Welcome to my
             portfolio.
           </p>
 
