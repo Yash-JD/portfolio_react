@@ -26,6 +26,7 @@ const Experience = () => {
       date: "Jun 2025 – Present",
       location: "Surat, Gujarat",
       description: "• Worked extensively on designing and building scalable backend systems using NestJS, Node.js, Prisma ORM, and MySQL. Implemented robust REST APIs with UUID-based data models, optimized schemas, and clean service-layer abstractions.\n• Built complex business logic including streak tracking systems, settlement and debt calculations, subscription lifecycle management, and reminder/notification workflows.\n• Integrated multiple third-party services such as Firebase Cloud Messaging (real-time and conditional notifications), Redis (Bull queues for background processing), Cloudflare Stream (video lifecycle via webhooks), RevenueCat (in-app subscriptions), Juspay UPI Intent & AutoPay flows, and SMS gateways. Designed secure webhook handlers, signature verification, and idempotent transaction processing.\n• Developed data scraping and ETL pipelines, applying whitelist-based filtering, topic/article grouping, and transferring structured data from MongoDB to MySQL via Azure Functions. Focused on data accuracy, performance, and storage optimization.\n• Hands-on experience with cron jobs, time-window–based logic, offline/online user handling, and real-time system behavior, with strong emphasis on production readiness, fault tolerance, and clean architecture.",
+      skills: "TypeScript · NestJS · Node.js · Prisma ORM · REST APIs · Redis · Bullmq · MySQL · MongoDB · Azure Functions · Git · DigitalOcean · Cloudflare Stream · Ubuntu · Firebase",
       img: logo1
     },
     {
@@ -35,6 +36,7 @@ const Experience = () => {
       date: "Feb 2025 – May 2025",
       location: "Surat, Gujarat",
       description: "• Database Architecture: I designed and optimized the MySQL database schemas specifically for e-commerce data, ensuring the system remained scalable and the data stayed organized.\n• Backend API Development: I built the application's RESTful APIs using Node.js, where I developed custom middleware to handle essential tasks like user authentication and request validation.\n• Frontend State Management: Using React and Redux, I built the interactive parts of the site, focusing on managing the state for the shopping cart and favorites functionality to keep the user experience seamless.\n• Payment Integration: I worked on the end-to-end integration of the Razorpay payment gateway, focusing on creating a secure and reliable checkout process for customers.\n• Feature Ownership: I took charge of the \"Cart\" and \"Wishlist\" modules, handling everything from the initial logic to the final UI updates to make the features feel responsive and easy to use.",
+      skills: "JavaScript · Node.js · Express.js · MySQL · React.js · Tailwind CSS",
       img: logo2
     }
   ];
@@ -125,6 +127,25 @@ const Experience = () => {
                     );
                   })()}
                 </div>
+
+                {/* Skills Section */}
+                {experience.skills && (
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-sm font-semibold text-white/80">Skills:</span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {experience.skills.split(' · ').map((skill, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded-full border border-cyan-400/30"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
