@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ecommerce from "../assets/portfolio/ecommerce.png";
-import gifGenerator from "../assets/portfolio/gifGenerator.png";
-import textTranform from "../assets/portfolio/textTransform.png";
-import worldAtlas from "../assets/portfolio/worldAtlas.png";
 import yelpCamp from "../assets/portfolio/YelpCamp.png";
 import studyNotion from "../assets/portfolio/studyNotion.png";
+import chatty from "../assets/portfolio/chatty.png";
 
 const Projects = () => {
   useEffect(() => {
@@ -18,18 +16,29 @@ const Projects = () => {
   const portfolios = [
     {
       id: 1,
-      name: "E-Shop",
-      src: ecommerce,
-      demo: "https://github.com/Yash-JD/react-ecommerce-app",
-      code: "https://github.com/Yash-JD/react-ecommerce-app",
+      name: "Chatty",
+      src: chatty,
+      demo: "https://chatty-xhmi.onrender.com/",
+      code: "https://github.com/Yash-JD/chatty-app",
       description:
-        "A modern e-commerce platform with product listings, wishlist, cart, and checkout features. Also includes user authentication and authorization. Integrated with Razorpay for payment processing.",
-      tech: "React, Redux, Node.js, Express, MySQL, Razorpay, Tailwind CSS",
+        "A real-time chat application with messaging, user authentication, and group chat features. Built with modern web technologies for seamless communication.",
+      tech: "React, Redux, Node.js, Express, MySQL, Socket.io, Tailwind CSS",
       features:
-        "Product management, user authentication with JWT, payment integration",
+        "Real-time messaging, user authentication, group chat, responsive design",
     },
     {
       id: 2,
+      name: "YelpCamp",
+      src: yelpCamp,
+      demo: "https://drive.google.com/file/d/1k6LtNq2acWgLz785-dGborBxi5xSVLjE/preview",
+      code: "https://github.com/Yash-JD/Yelp-Camp",
+      description:
+        "YelpCamp is a web app for sharing and reviewing campgrounds. It allows users to create, edit, and delete campgrounds, as well as leave reviews. Admin can manage users and campgrounds.",
+      tech: "Node.js, Express, MongoDB, EJS, Bootstrap",
+      features: "User authentication, campground management, review system",
+    },
+    {
+      id: 3,
       name: "Study Notion",
       src: studyNotion,
       demo: "https://college-ed-tech.vercel.app/",
@@ -41,73 +50,64 @@ const Projects = () => {
         "Course management, user authentication, progress tracking, responsive design, student & teacher dashboards",
     },
     {
-      id: 3,
-      name: "YelpCamp",
-      src: yelpCamp,
-      demo: "https://drive.google.com/file/d/1k6LtNq2acWgLz785-dGborBxi5xSVLjE/preview",
-      code: "https://github.com/Yash-JD/Yelp-Camp",
+      id: 4,
+      name: "E-Shop",
+      src: ecommerce,
+      demo: "https://github.com/Yash-JD/react-ecommerce-app",
+      code: "https://github.com/Yash-JD/react-ecommerce-app",
       description:
-        "YelpCamp is a web app for sharing and reviewing campgrounds. It allows users to create, edit, and delete campgrounds, as well as leave reviews. Admin can manage users and campgrounds.",
-      tech: "Node.js, Express, MongoDB, EJS, Bootstrap",
-      features: "User authentication, campground management, review system",
+        "A modern e-commerce platform with product listings, wishlist, cart, and checkout features. Also includes user authentication and authorization. Integrated with Razorpay for payment processing.",
+      tech: "React, Redux, Node.js, Express, MySQL, Razorpay, Tailwind CSS",
+      features:
+        "Product management, user authentication with JWT, payment integration",
     },
 
-    {
-      id: 4,
-      name: "World Atlas",
-      src: worldAtlas,
-      demo: "https://world-atlas-jade.vercel.app/",
-      code: "https://github.com/Yash-JD/world-atlas",
-      description:
-        "WorldAtlas is an interactive SPA to explore countries and their details.",
-      tech: "React, REST APIs, CSS",
-      features: "Country search, details view",
-    },
-    {
-      id: 5,
-      name: "Text Transform Tool",
-      src: textTranform,
-      demo: "https://text-transformation.vercel.app/",
-      code: "https://github.com/Yash-JD/Text-Transformation",
-      description: "A text transformation tool with various utilities.",
-      tech: "React, Redux Toolkit, CSS",
-      features:
-        "Text manipulation, case conversion, word count, character count",
-    },
-    {
-      id: 6,
-      name: "GIF Generator",
-      src: gifGenerator,
-      demo: "https://gif-generator-pied.vercel.app/",
-      code: "https://github.com/Yash-JD/gif_generator",
-      description:
-        "A GIF generator that allows users to search custom gifs and also see random gifs.",
-      tech: "React, Giphy API, CSS",
-      features: "GIF search, random GIF display, responsive design",
-    },
   ];
 
   return (
-    <div name="projects" className="w-full text-white min-h-screen py-10">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-6 mb-8">
-          <p
-            className="text-4xl font-bold inline border-b-4 border-gray-500"
-            data-aos="fade-up"
-          >
+    <div name="projects" className="w-full text-white py-16 md:py-20">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        <div className="pb-4 mb-6 text-center flex items-center justify-center gap-3" data-aos="fade-up">
+          <span className="text-3xl">💻</span>
+          <p className="text-4xl font-bold inline">
             Projects
           </p>
         </div>
 
         <div
-          className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 space-y-8"
+          className="grid sm:grid-cols-2 md:grid-cols-2 gap-8"
           data-aos-anchor-placement="top-center"
         >
           {portfolios.map((project) => (
             <div
               key={project.id}
-              className="shadow-md shadow-gray-600 rounded-lg"
+              className="flex flex-col gap-5 p-6 transition-all duration-400"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+                padding: '24px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '20px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
+              }}
               data-aos="fade-up"
+              data-aos-delay={project.id * 100}
             >
               <h3 className="uppercase font-bold text-lg mb-4 text-center">
                 {project.name}
@@ -115,7 +115,7 @@ const Projects = () => {
               <img
                 src={project.src}
                 alt=""
-                className="rounded-md duration-200 h-[10rem] w-[22rem] hover:scale-105 object-contain mx-auto"
+                className="rounded-md duration-200 h-[8rem] w-[18rem] object-contain mx-auto mb-3"
               />
               <div className="flex items-center justify-center">
                 <button

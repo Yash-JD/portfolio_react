@@ -9,13 +9,16 @@ const Contact = () => {
   return (
     <div name="contact" className="w-full text-white min-h-screen py-10 px-4">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
-          <p
-            className="text-4xl font-bold inline border-b-4 border-gray-500"
-            data-aos="fade-up"
-          >
-            Contact
-          </p>
+        <div className="pb-8 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="text-3xl">📬</span>
+            <p
+              className="text-4xl font-bold inline"
+              data-aos="fade-up"
+            >
+              Contact
+            </p>
+          </div>
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
 
@@ -34,7 +37,31 @@ const Contact = () => {
                 email
               )}%0AMessage: ${encodeURIComponent(message)}`;
             }}
-            className="flex flex-col w-full md:w-2/3 lg:w-1/2 bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-white/20"
+            className="flex flex-col w-full md:w-2/3 lg:w-1/2 p-6 transition-all duration-400"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+              padding: '24px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              backdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+              transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+              e.currentTarget.style.transform = 'translateY(0px)';
+              e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
+            }}
             data-aos="fade-up"
           >
             <input
