@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import SocialLinks from "./components/SocialLinks";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Experience />
       <Projects />
+      <Education />
       <About />
 
       <Skills />
