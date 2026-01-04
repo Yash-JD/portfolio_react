@@ -88,19 +88,16 @@ const Projects = () => {
   ];
 
   return (
-    <div name="projects" className="w-full text-white min-h-screen py-10">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-6 mb-8">
-          <p
-            className="text-4xl font-bold inline border-b-4 border-gray-500"
-            data-aos="fade-up"
-          >
+    <div name="projects" className="w-full text-white py-16 md:py-20">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        <div className="pb-4 mb-6" data-aos="fade-up">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Projects
           </p>
         </div>
 
         <div
-          className="grid sm:grid-cols-2 md:grid-cols-2 gap-10 space-y-8"
+          className="grid sm:grid-cols-2 md:grid-cols-2 gap-8"
           data-aos-anchor-placement="top-center"
         >
           {portfolios.map((project) => (
@@ -115,7 +112,7 @@ const Projects = () => {
               <img
                 src={project.src}
                 alt=""
-                className="rounded-md duration-200 h-[10rem] w-[22rem] hover:scale-105 object-contain mx-auto"
+                className="rounded-md duration-200 h-[8rem] w-[18rem] hover:scale-105 object-contain mx-auto mb-3"
               />
               <div className="flex items-center justify-center">
                 <button

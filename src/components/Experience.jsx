@@ -9,16 +9,16 @@ const Experience = () => {
   return (
     <div
       name="experience"
-      className="w-full min-h-screen text-white py-10 px-4"
+      className="w-full text-white py-16 md:py-20 px-4"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-2 " data-aos="fade-up">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        <div className="pb-2 mb-6" data-aos="fade-up">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Experience
           </p>
         </div>
 
-        <div className="mt-12 space-y-8" data-aos="fade-up">
+        <div className="mt-8 space-y-6" data-aos="fade-up">
           {/* Experience 1 */}
           <div className="bg-white/10 border border-white/20 rounded-xl p-6 shadow-lg">
             <h4 className="text-2xl font-bold text-cyan-400 mb-1">
