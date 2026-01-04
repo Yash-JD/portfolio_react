@@ -15,6 +15,7 @@ const Contact = () => {
             <p
               className="text-4xl font-bold inline"
               data-aos="fade-up"
+              data-aos-delay="100"
             >
               Contact
             </p>
@@ -22,7 +23,8 @@ const Contact = () => {
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center" data-aos="fade-up"
+          data-aos-delay="300">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -63,6 +65,7 @@ const Contact = () => {
               e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
             }}
             data-aos="fade-up"
+            data-aos-delay="200"
           >
             <input
               type="text"

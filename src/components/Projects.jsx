@@ -67,7 +67,7 @@ const Projects = () => {
   return (
     <div name="projects" className="w-full text-white py-16 md:py-20">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
-        <div className="pb-4 mb-6 text-center flex items-center justify-center gap-3" data-aos="fade-up">
+        <div className="pb-4 mb-6 text-center flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
           <span className="text-3xl">💻</span>
           <p className="text-4xl font-bold inline">
             Projects
@@ -77,6 +77,8 @@ const Projects = () => {
         <div
           className="grid sm:grid-cols-2 md:grid-cols-2 gap-8"
           data-aos-anchor-placement="top-center"
+          data-aos="fade-up"
+          data-aos-delay="300"
         >
           {portfolios.map((project) => (
             <div
@@ -107,7 +109,7 @@ const Projects = () => {
                 e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
               }}
               data-aos="fade-up"
-              data-aos-delay={project.id * 100}
+              data-aos-delay={200 + project.id * 100}
             >
               <h3 className="uppercase font-bold text-lg mb-4 text-center">
                 {project.name}
