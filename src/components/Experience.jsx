@@ -16,7 +16,7 @@ const Experience = () => {
       company: "Square Infosoft",
       date: "Jun 2025 – Present",
       location: "Surat, Gujarat",
-      description: "Built RESTful APIs with Node.js and Express, integrated MongoDB for data storage, and implemented authentication and authorization. Improved API performance and reliability through code optimization and testing.",
+      description: "• Worked extensively on designing and building scalable backend systems using NestJS, Node.js, Prisma ORM, and MySQL. Implemented robust REST APIs with UUID-based data models, optimized schemas, and clean service-layer abstractions.\n• Built complex business logic including streak tracking systems, settlement and debt calculations, subscription lifecycle management, and reminder/notification workflows.\n• Integrated multiple third-party services such as Firebase Cloud Messaging (real-time and conditional notifications), Redis (Bull queues for background processing), Cloudflare Stream (video lifecycle via webhooks), RevenueCat (in-app subscriptions), Juspay UPI Intent & AutoPay flows, and SMS gateways. Designed secure webhook handlers, signature verification, and idempotent transaction processing.\n• Developed data scraping and ETL pipelines, applying whitelist-based filtering, topic/article grouping, and transferring structured data from MongoDB to MySQL via Azure Functions. Focused on data accuracy, performance, and storage optimization.\n• Hands-on experience with cron jobs, time-window–based logic, offline/online user handling, and real-time system behavior, with strong emphasis on production readiness, fault tolerance, and clean architecture.",
       img: logo1
     },
     {
@@ -25,7 +25,7 @@ const Experience = () => {
       company: "LogWinTech Pvt. Lmt",
       date: "Feb 2025 – May 2025",
       location: "Surat, Gujarat",
-      description: "Learned and applied CSS, JavaScript, React, Node.js, Express, MySQL by building a complete e-commerce website. Gained hands-on experience in both frontend and backend development, database design, and full-stack project deployment.",
+      description: "• Database Architecture: I designed and optimized the MySQL database schemas specifically for e-commerce data, ensuring the system remained scalable and the data stayed organized.\n• Backend API Development: I built the application's RESTful APIs using Node.js, where I developed custom middleware to handle essential tasks like user authentication and request validation.\n• Frontend State Management: Using React and Redux, I built the interactive parts of the site, focusing on managing the state for the shopping cart and favorites functionality to keep the user experience seamless.\n• Payment Integration: I worked on the end-to-end integration of the Razorpay payment gateway, focusing on creating a secure and reliable checkout process for customers.\n• Feature Ownership: I took charge of the \"Cart\" and \"Wishlist\" modules, handling everything from the initial logic to the final UI updates to make the features feel responsive and easy to use.",
       img: logo2
     }
   ];
@@ -89,9 +89,14 @@ const Experience = () => {
                   </span>
                 </div>
 
-                <p className="text-base text-gray-200 leading-relaxed">
-                  {experience.description}
-                </p>
+                <div className="text-base text-gray-200 leading-relaxed space-y-2">
+                  {experience.description.split('\n').map((point, index) => (
+                    <div key={index} className="flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1">•</span>
+                      <span>{point.replace('• ', '')}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
