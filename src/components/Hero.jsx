@@ -23,7 +23,7 @@ const Home = () => {
         <div className="flex flex-col justify-center w-full md:w-[65%] gap-2 md:gap-3">
           <h1 className="name text-4xl md:text-6xl font-bold">Hello,</h1>
           <h2 className="text-xl md:text-5xl font-bold text-[#ee4949]">
-            I'm Yash{" "}
+            I'm Yash Dobariya{" "}
           </h2>
           <div className="text-xl md:text-5xl font-bold">
             <span style={{ fontWeight: "bold", color: "pink" }}>

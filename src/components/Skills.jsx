@@ -76,7 +76,7 @@ const Skills = () => {
   return (
     <div name="skills" className="w-full py-16 md:py-20">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full text-white">
-        <div>
+        <div className="text-center">
           <p
             className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline"
             data-aos="fade-up"

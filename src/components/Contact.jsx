@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div name="contact" className="w-full text-white min-h-screen py-10 px-4">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-8">
+        <div className="pb-8 text-center">
           <p
             className="text-4xl font-bold inline border-b-4 border-gray-500"
             data-aos="fade-up"
