@@ -46,13 +46,14 @@ const Experience = () => {
             <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full">
 
                 {/* Section Header */}
-                <div className="pb-2 mb-8 text-center flex items-center justify-center gap-3" data-aos="fade-up">
+                <div className="pb-2 mb-8 text-center flex items-center justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
                     <span className="text-3xl">💼</span>
                     <h2 className="text-4xl font-bold">Experience</h2>
                 </div>
 
                 {/* Experience Cards */}
-                <div className="space-y-6">
+                <div className="space-y-6" data-aos="fade-up"
+                    data-aos-delay="300">
                     {
                         experiences.map((experience, index) => {
                             const lines = experience.description.split("\n");
@@ -87,7 +88,7 @@ const Experience = () => {
                                         e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
                                     }}
                                     data-aos="fade-up"
-                                    data-aos-delay={index * 100}
+                                    data-aos-delay={200 + index * 100}
                                 >
                                     <div className="w-14 h-14 rounded-2xl bg-white/8 border border-white/15 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-md">
                                         {
