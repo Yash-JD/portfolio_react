@@ -13,7 +13,7 @@ const Contact = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="text-3xl">📬</span>
             <p
-              className="text-4xl font-bold inline border-b-4 border-gray-500"
+              className="text-4xl font-bold inline"
               data-aos="fade-up"
             >
               Contact

@@ -92,7 +92,7 @@ const Projects = () => {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
         <div className="pb-4 mb-6 text-center flex items-center justify-center gap-3" data-aos="fade-up">
           <span className="text-3xl">💻</span>
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="text-4xl font-bold inline">
             Projects
           </p>
         </div>

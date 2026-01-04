@@ -80,7 +80,7 @@ const Skills = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="text-3xl">💡</span>
             <p
-              className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline"
+              className="text-4xl font-bold border-b-0 p-2 inline"
               data-aos="fade-up"
             >
               Skills & Tools
