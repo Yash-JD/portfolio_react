@@ -50,7 +50,7 @@ const Home = () => {
 
           <div className="pt-2">
             <a
-              href="/Yash_Resume.pdf"
+              href="https://drive.google.com/file/d/1wGq2RP9dVcMmuOv1QcoNhjmGbVe0rGs9/view?usp=sharing"
               download="true"
               target="_blank"
               rel="noreferrer"
