@@ -31,7 +31,7 @@ const SocialLinks = () => {
           Mail <SiGmail size={30} className="text-red-500" />
         </>
       ),
-      href: "mailto:yjdobariya0@gmail.com",
+      href: "mailto:yashdatwork@gmail.com",
     },
     // {
     //   id: 4,
