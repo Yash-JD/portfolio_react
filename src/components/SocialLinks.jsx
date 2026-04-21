@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const SocialLinks = () => {
   const links = [
@@ -32,7 +31,7 @@ const SocialLinks = () => {
           Mail <SiGmail size={30} className="text-red-500" />
         </>
       ),
-      href: "mailto:yjdobariya0@gmail.com",
+      href: "mailto:yashdatwork@gmail.com",
     },
     // {
     //   id: 4,
